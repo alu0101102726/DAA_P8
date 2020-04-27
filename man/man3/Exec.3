@@ -1,0 +1,108 @@
+.TH "Exec" 3 "Mon Apr 27 2020" "Max-Mean Dispersion Problem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Exec \- Al aplicar el patrón Strategy, es necesario tener una clase que actúe como context y que gestione las otras\&. En nuestro caso, la clase exec va a ser la encargada de esto\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <exec\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExec\fP (std::string fileName)"
+.br
+.RI "Construye un nuevo exec, llama al constructor del grafo que se va a encargar de llamar al fichero y gestionar todo\&. "
+.ti -1c
+.RI "void \fBchangeAlgorithm\fP (\fBAlgorithm\fP *newAlgorithm)"
+.br
+.RI "Se encarga de cambiar el algoritmo con el que se pasa por parámetro\&. "
+.ti -1c
+.RI "\fBGraph\fP \fBgetGraph\fP ()"
+.br
+.RI "Devuelve un grafo\&. "
+.ti -1c
+.RI "void \fBsolve\fP ()"
+.br
+.RI "Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo, realizar el mismo e imprimir su solución, así como el tiempo que ha tardado en ejecutarlo\&. "
+.ti -1c
+.RI "std::chrono::time_point< std::chrono::system_clock > \fBgetRunTime\fP ()"
+.br
+.RI "Devuelve el tiempo de ejecución actual\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Al aplicar el patrón Strategy, es necesario tener una clase que actúe como context y que gestione las otras\&. En nuestro caso, la clase exec va a ser la encargada de esto\&. 
+
+
+.PP
+Definition at line 16 of file exec\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Exec::Exec (std::string fileName)"
+
+.PP
+Construye un nuevo exec, llama al constructor del grafo que se va a encargar de llamar al fichero y gestionar todo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP Nombre del fichero 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file exec\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Exec::changeAlgorithm (\fBAlgorithm\fP * newAlgorithm)"
+
+.PP
+Se encarga de cambiar el algoritmo con el que se pasa por parámetro\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewAlgorithm\fP Representa el algoritmo al que se va a cambiar\&. 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file exec\&.cpp\&.
+.SS "\fBGraph\fP Exec::getGraph ()"
+
+.PP
+Devuelve un grafo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBGraph\fP 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file exec\&.cpp\&.
+.SS "std::chrono::time_point< std::chrono::system_clock > Exec::getRunTime ()"
+
+.PP
+Devuelve el tiempo de ejecución actual\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::chrono::time_point<std::chrono::system_clock> Tiempo actual 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file exec\&.cpp\&.
+.SS "void Exec::solve ()"
+
+.PP
+Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo, realizar el mismo e imprimir su solución, así como el tiempo que ha tardado en ejecutarlo\&. 
+.PP
+Definition at line 51 of file exec\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Max-Mean Dispersion Problem from the source code\&.
